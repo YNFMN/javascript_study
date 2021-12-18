@@ -82,13 +82,13 @@ let weekDays = ['понедельник', 'вторник', 'среда', 'че�
 let weekDay = 'вторник';
 let weekDayIndex = weekDays.indexOf(weekDay);
 
-for (j = 1; j < 32; j++) {
-  dayNumbers.push(j);
+for (i = 1; i < 32; i++) {
+  dayNumbers.push(i);
 }
 
 for (let dayNumber of dayNumbers) {
-  let j = (weekDayIndex + dayNumber - 1) % 7;
-  console.log(`${dayNumber} января, ${weekDays[j]}`);
+  let i = (weekDayIndex + dayNumber - 1) % 7;
+  console.log(`${dayNumber} января, ${weekDays[i]}`);
 }
 
 //a panzer passes through the "way" of an array where "false" means "no mine" and "true" = "mine". the panzer has 2 lives, so panzer will destroy when encounters the second mine
@@ -96,9 +96,9 @@ for (let dayNumber of dayNumbers) {
 let roadMines  = [false, false, false, true, false, false, false];
 let damaged = false;
 
-for (let l = 0; l < (roadMines.length - 1); ++l) {
-  console.log(`Танк переместился на позицию ${l+1}`);
-  if (roadMines[l]) {
+for (let i = 0; i < (roadMines.length - 1); ++i) {
+  console.log(`Танк переместился на позицию ${i+1}`);
+  if (roadMines[i]) {
     if (damaged) {
       console.log('Танк уничтожен');
       break;
